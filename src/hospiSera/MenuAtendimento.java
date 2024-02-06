@@ -1,5 +1,6 @@
 package hospiSera;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuAtendimento {
@@ -9,6 +10,10 @@ public class MenuAtendimento {
 	String servicoItem, nome;
 
 	public void MenuAtendime() {
+		Atendimento at = new Atendimento();
+		Menu mn = new Menu();
+		ArrayList<String> atendimentos = at.getAtendimentos();
+		
 		System.out.println("     BEM VINDO AO HOSPITAL SERAFIM     ");
 		System.out.println("      ** MODULO DE ATENDIMENTO **     ");
 		System.out.println("                                        ");
@@ -20,25 +25,19 @@ public class MenuAtendimento {
 		escolha = sc.nextInt();
 
 		if (escolha == 1) {
-			System.out.println("Informe o CPF do paciente:");
-			cpf = sc.nextInt();
-			System.out.println("Informe o serviço ou item");
-			servicoItem = sc.next();
-			for() {
-				
-			}
-			
-
+			at.atendime();
 		} else if (escolha == 2) {
-
+			for(int i = 0; i < atendimentos.size(); i++) {
+				System.out.println(atendimentos.get(i));
+			}
+			MenuAtendime();
 		} else if (escolha == 3) {
-
+			mn.MenuPrincipal();
 		} else if (escolha == 4) {
-
-		} else if (escolha == 5) {
-
+			System.out.println("Saindo do sistema...");
 		} else {
-
+			System.out.println("Código incorreto tente novamente\n");
+			MenuAtendime();
 		}
 
 	}
