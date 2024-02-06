@@ -7,7 +7,7 @@ public class Login {
     Scanner sc = new Scanner(System.in);
     private int senha, senhaBD, senhaVL;
     private String login, loginBD, loginVL;
-    Usuario us = new Usuario();
+
     Menu mn = new Menu();
 
     void entrar() {
@@ -18,6 +18,7 @@ public class Login {
     }
 
     void validacao() {
+        Usuario us = new Usuario();
         ArrayList<String> logins = us.getLogins();
         ArrayList<Integer> senhas = us.getSenhas();
 
@@ -31,10 +32,10 @@ public class Login {
         }
 
         if (login.equals(loginVL) && senha == senhaVL) {
-            System.out.println("Login realizado com sucesso...");
+            System.out.println("\nLogin realizado com sucesso...\n");
             mn.MenuPrincipal();
         } else {
-            System.out.println("Login ou senha incorretos");
+            System.out.println("\nLogin ou senha incorretos\n");
             entrar();
             validacao();
         }

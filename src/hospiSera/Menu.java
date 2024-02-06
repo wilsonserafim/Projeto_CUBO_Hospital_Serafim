@@ -6,9 +6,8 @@ public class Menu {
 	Scanner sc = new Scanner(System.in);
 	int escolha = 0 ;
 	
-	MenuUsuario mnus = new MenuUsuario();
-	
 	public void MenuPrincipal() {
+		MenuUsuario mnus = new MenuUsuario();
 		System.out.println("     BEM VINDO AO HOSPITAL SERAFIM     ");
 		System.out.println("   AQUI VOCÊ É ATENDIDO PELOS ANJOS     ");
 		System.out.println("                                        ");
@@ -30,7 +29,7 @@ public class Menu {
 		}else if(escolha == 3) {
 			
 		}else if(escolha == 4) {
-			mnus.Menu();
+			mnus.MenuUsuario();
 			
 		}else if(escolha == 5) {
 			
