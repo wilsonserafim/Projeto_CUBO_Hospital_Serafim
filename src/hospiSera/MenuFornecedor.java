@@ -36,7 +36,7 @@ public class MenuFornecedor {
 
 			fn.adicionarFornecedor(ncnpj, ncodigo, nrazao, nendereco);
 
-			System.out.println("Novo usuário adicionado com sucesso!\n\n");
+			System.out.println("Novo Fornecedor adicionado com sucesso!\n\n");
 			MenuForn();			
 
 		} else if (escolha == 2) {
